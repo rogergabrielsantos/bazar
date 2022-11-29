@@ -67,9 +67,13 @@ function setValor($valor) {
 		
     
 function insere($conexao) {
-	
+	Try{
 $query = "INSERT INTO produto(descricao, valor,quantidade,obs) VALUES ('$this->descricao','$this->valor','$this->quantidade','$this->obs')";
 $conexao->query($query);
+	}catch(Exception $e){
+		echo $e;
+		
+	}
 
 
 }

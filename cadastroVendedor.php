@@ -10,7 +10,7 @@ require_once ('header.php');
 		}
     ?>
     <h4 class="text-center text-dark pt-2">Cadastrar Vendedor </h3>
-        <form action="movimento/movimentoEmpresa.php" method="Post">
+        <form action="movimento/movimentoVendedor.php" method="Post">
 
             <!-- caixas de texto -->
             <div class="form-group">

@@ -51,8 +51,8 @@
                            data-toggle="dropdown">Produtos</a>
 
                         <div class="dropdown-menu">
-                            <a href="cadastroProduto.php" class="dropdown-item">Cadastrar Funcionarios</a>
-                            <a href="consultaFuncionario.php" class="dropdown-item">Consultar/alterar Funcionarios</a>
+                            <a href="cadastroProduto.php" class="dropdown-item">Cadastrar Produtos</a>
+                            <a href="consultaFuncionario.php" class="dropdown-item">Consultar/alterar Produtos</a>
                                 
                         
 						</div>

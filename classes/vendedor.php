@@ -63,10 +63,12 @@ function setEmail($email) {
 		
     
 function insere($conexao) {
-	
+try{	
 $query = "INSERT INTO Vendedores(nome, email, telefone) VALUES ('$this->nome','$this->email','$this->telefone')";
 $conexao->query($query);
-
+}catch(Error $e){
+	echo $e;
+}
 
 }
 function deletar($conexao, $cod) {

@@ -2,7 +2,7 @@
 session_start();
 require '../classes/conexao.php';
 require_once 'procedimentos.php';
-require_once '../classes/comprador.php';
+require_once '../classes/vendedor.php';
 
 $cod = isset($_POST['codigo']) ? $_POST['codigo'] : "";
 
@@ -12,9 +12,9 @@ if(isset($_POST['salvar'])or isset($_POST['alterar'])){
 $nome=$_POST['nome'];
 $telefone=$_POST['telefone'];
 $email=$_POST['email'];
-$senacoin = $_POST['senacoin'];
 
-$A = new comprador($cod,$nome,$email, $telefone, $senacoin);
+
+$A = new vendedor($cod,$nome,$email, $telefone);
  
 
 }
@@ -29,7 +29,7 @@ $alterar = isset($_POST['alterar']) ? $_POST['alterar'] : "";
 $salvar = isset($_POST['salvar']) ? $_POST['salvar'] : "";
 
 if ($delete) {
-	$A = new comprador("","","","","");
+	$A = new vendedor("","","","");
     $A->deletar($conexao,$cod);
     $_SESSION['msg'] = "<div class='alert alert-success'>Usuario /Excluido com sucesso!</div>";
     echo("<script type='text/javascript'> location.href='../consultaEmpresa.php';</script>");
@@ -39,7 +39,7 @@ if ($delete) {
 if ($salvar) {
    
 	$A->insere($conexao);
-    $_SESSION['msg'] = "<div class='alert alert-success'>Comprador cadastrado com sucesso!</div>";
+    $_SESSION['msg'] = "<div class='alert alert-success'>Vendedor cadastrado com sucesso!</div>";
     echo("<script type='text/javascript'> location.href='../CadastroComprador.php';</script>");
 }
 if ($alterar) {

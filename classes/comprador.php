@@ -8,7 +8,7 @@ class comprador {
     private $telefone;
 	private $senacoin;
   	
-	function __construct($codigo, $nome, $email, $telefone, $senaccoin) {
+	function __construct($codigo, $nome, $email, $telefone, $senacoin) {
         $this->codigo = $codigo;
         $this->nome = $nome;
         $this->email = $email;
@@ -70,10 +70,13 @@ function setEmail($email) {
 		
     
 function insere($conexao) {
-	
-$query = "INSERT INTO comprador(nome, email, telefone,senacoin) VALUES ('$this->nome','$this->email','$this->telefone','$this->senaccoin')";
+	try{
+$query = "INSERT INTO comprador(nome, email, telefone,senacoin) VALUES ('$this->nome','$this->email','$this->telefone','$this->senacoin')";
 $conexao->query($query);
-
+	}catch(Error $e){
+		echo $e;
+		
+	}
 
 }
 function deletar($conexao, $cod) {

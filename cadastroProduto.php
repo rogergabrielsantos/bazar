@@ -10,7 +10,7 @@ require_once ('header.php');
 		}
     ?>
     <h4 class="text-center text-dark pt-2">Cadastrar Produto</h3>
-        <form action="movimento/movimentoEmpresa.php" method="Post">
+        <form action="movimento/movimentoProduto.php" method="Post">
 
             <!-- caixas de texto -->
             <div class="form-group">
@@ -23,9 +23,12 @@ require_once ('header.php');
             </div>
 			<div class="form-group">
                 <label for="nome">Quantidade</label>
-                <input class="form-control" type="text" id="quantidade" name="quantidade" placeholder="Digite o Quantidade">
+                <input class="form-control" readonly type="text" id="quantidade" name="quantidade" value="0" placeholder="Digite o Quantidade">
             </div>
-			
+			<div class="form-group">
+                <label for="nome">Observação</label>
+                <input class="form-control" type="text" id="obs" name="obs" placeholder="Observação">
+            </div>
             <br>
             <input  class="btn btn-primary" name="salvar" type="submit" value="Salvar">
         </form>
