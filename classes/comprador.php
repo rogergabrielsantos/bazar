@@ -88,7 +88,20 @@ $stmt->execute();
 
 
 }
-   
+function atualiza($conexao,$cod,$qtd) {
+		$query = "UPDATE comprador SET senacoin=senacoin+'$qtd' WHERE cod= $cod";
+		$stmt=$conexao->prepare($query);
+		$stmt->execute();
+	
+	}
+ 
 
+ 
+function alterar($conexao,$cod) {
+		$query = "UPDATE comprador SET nome='$this->nome',email='$this->email',telefone='$this->telefone',senacoin='$this->senacoin' WHERE cod= $cod";
+		$stmt=$conexao->prepare($query);
+		$stmt->execute();
+	
+	}
 
 }

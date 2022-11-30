@@ -4,16 +4,22 @@ class entrada {
 
     private $codigo;
     private $codProduto;
+	private $produto;
     private $codComprador;
+	private $comprador;
 	private $codVendedor;
+	private $vendedor;
     private $data;
 	private $quantidade;
   	
-	function __construct($codigo, $codProduto, $codComprador,$codVendedor,$data ,$quantidade) {
+	function __construct($codigo, $codProduto, $produto, $codComprador,$comprador,$codVendedor,$vendedor,$data ,$quantidade) {
         $this->codigo = $codigo;
         $this->codProduto = $codProduto;
+		$this->produto = $produto;
         $this->codComprador = $codComprador;
+		$this->comprador = $comprador;
 		$this->codVendedor = $codVendedor;
+		$this->vendedor = $vendedor;
 		$this->data = $data;
         $this->quantidade = $quantidade;
 		
@@ -23,66 +29,112 @@ class entrada {
     function getCodigo() {
         return $this->codigo;
     }
-    function getDescricao() {
-        return $this->descricao;
+    function getCodProduto() {
+        return $this->codProduto;
     }
-	function getValor() {
-        return $this->valor;
+	function getProduto() {
+        return $this->produto;
+    }
+		
+	function getCodComprador() {
+        return $this->codComprador;
+    }
+	function getComprador() {
+        return $this->comprador;
     }
  function getQuantidade() {
         return $this->quantidade;
     }
-  function getObs() {
-        return $this->obs;
+  function getCodVendedor() {
+        return $this->codVendedor;
     }  
-    
-
+    function getVendedor() {
+        return $this->vendedor;
+    }  
+	function getData() {
+        return $this->data;
+    }  
  
-function setCodigo($codigo) {
+ 
+    function setCodigo($codigo) {
         $this->codigo = $codigo;
     }
-function setDescricao($descricao) {
-        $this->descricao = $descricao;
-    }	
-function setValor($valor) {
-        $this->valor = $valor;
+    function setCodProduto($codProduto) {
+        $this->codProduto=$codProduto;
     }
+	function setProduto($produto) {
+        $this->produto=$produto;
+    }
+		
+	function setCodComprador($codComprador) {
+        $this->codComprador=$codComprador;
+    }
+	function setComprador($comprador) {
+        $this->comprador=$comprador;
+    }
+ function setQuantidade($quantidade) {
+        $this->quantidade=$quantidade;
+    }
+  function setCodVendedor($codVendedor) {
+        $this->codVendedor=$codVendedor;
+    }  
+    function setVendedor($vendedor) {
+        $this->vendedor=$vendedor;
+    }  
+	function setData($data) {
+        $this->data=$data;
+    }  
+ 
+ 
 
-    function setQuantidade($quantidade) {
-        $this->quantidade = $quantidade;
-    }
- function setObs($obs) {
-        $this->obs = $obs;
-    }
  
 
     
-    function mostra($conexao, $nome,$senha) {
-		$query = "select * from estranda where nome ='$nome' ";
-        $stmt = $conexao->query($query);
-		$user = $stmt->fetch(PDO::FETCH_OBJ);
+    function mostra($conexao, $data) {
+
+		$query = "select * from entrada where data = '$data'";
+        foreach($conexao->query($query) as $chave=>$valor){
+		$this->codigo[] = $valor[0];
+		$this->codProduto[]= $valor[1];
+		$this->produto[]= $valor[2];
+		$this->codComprador[] = $valor[3];
+		$this->comprador[] = $valor[4];
+		$this->codVendedor[]= $valor[5];
+		$this->vendedor[]= $valor[6];
+		$this->quantidade[] = $valor[8];
 		
-		$this->nome = $user->Nome;
+	
 		
 		
+		
+		}
+		
+    
     }
 
 		
     
 function insere($conexao) {
-	
-$query = "INSERT INTO entrada(codProduto, codComprador,codVendedor,data,quantidade) VALUES ('$this->codProduto','$this->codComprador','$this->codVendedor','$this->data','$this->quantidade')";
+	Try{
+$query = "INSERT INTO entrada(codProduto, produto,codComprador,comprador,codVendedor,vendedor,data,quantidade) VALUES ('$this->codProduto','$this->produto','$this->codComprador','$this->comprador','$this->codVendedor','$this->vendedor','$this->data','$this->quantidade')";
 $conexao->query($query);
-
+ 
+}catch(Error $e){
+		echo $e;
+		
+	}
 
 }
 function deletar($conexao, $cod) {
-
+try{
 $query = "delete from entrada where cod= '$cod'";
 $stmt=$conexao->prepare($query);
 
 $stmt->execute();
-
+}catch(Error $e){
+		echo $e;
+		
+	}
 
 }
    

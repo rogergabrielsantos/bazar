@@ -41,8 +41,7 @@ session_start();
                                         <input class="form-control ls-login-bg-password input-lg" id="userPassword" type="password" name="senha" aria-label="Senha" placeholder="Digite sua senha" required>
                                     </div>
 
-                                 <br>
-
+                                    
                                     <input type="submit" value="Entrar" class="btn btn-primary btn-lg btn-block">
 
 

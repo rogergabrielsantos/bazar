@@ -41,7 +41,7 @@
 
                         <div class="dropdown-menu">
                             <a href="CadastroComprador.php" class="dropdown-item">Cadastrar</a>
-                            <a href="consultaEmpresa.php" class="dropdown-item">Consultar/alterar</a>
+                            <a href="consultaComprador.php" class="dropdown-item">Consultar/alterar</a>
 
                         </div>
 
@@ -52,7 +52,7 @@
 
                         <div class="dropdown-menu">
                             <a href="cadastroProduto.php" class="dropdown-item">Cadastrar Produtos</a>
-                            <a href="consultaFuncionario.php" class="dropdown-item">Consultar/alterar Produtos</a>
+                            <a href="consultaProduto.php" class="dropdown-item">Consultar/alterar Produtos</a>
                                 
                         
 						</div>
@@ -64,12 +64,22 @@
 
                         <div class="dropdown-menu">
                             <a href="cadastroVendedor.php" class="dropdown-item">Cadastrar Vendedor</a>
-                            <a href="consultaVeiculo.php" class="dropdown-item">Consultar/alterar Vendedor</a>
+                            <a href="consultaVendedor.php" class="dropdown-item">Consultar/alterar Vendedor</a>
                           
                         </div>
 
                     </li>
+						<li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" 
+                           data-toggle="dropdown">Entrada</a>
 
+                        <div class="dropdown-menu">
+                            <a href="entradaProduto.php" class="dropdown-item">Entrada Produtos</a>
+                            <a href="excluirEntrada.php" class="dropdown-item">Excluir Entrada</a>
+                          
+                        </div>
+
+                    </li>
 
                     </li>
 

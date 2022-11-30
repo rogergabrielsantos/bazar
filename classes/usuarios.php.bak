@@ -62,13 +62,10 @@ function setUsuario($usuario) {
 		$query = "select * from usuario where usuario ='$usuario' and senha = '$senha'";
         $stmt = $conexao->query($query);
 		$user = $stmt->fetch(PDO::FETCH_OBJ);
-		if($user){
 		$this->usuario = $user->usuario;
 		$this->perfil = $user->perfil;
 		$this->nome = $user->nome;
-		$this->codigo = $user->cod;	
-		}
-		
+		$this->codigo = $user->cod;
 		
     }
 

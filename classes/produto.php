@@ -64,6 +64,7 @@ function setValor($valor) {
 		
     }
 
+
 		
     
 function insere($conexao) {
@@ -77,16 +78,29 @@ $conexao->query($query);
 
 
 }
+
 function deletar($conexao, $cod) {
 
-$query = "delete from usuarios where cod= '$cod'";
+$query = "delete from produto where cod= '$cod'";
 $stmt=$conexao->prepare($query);
 
 $stmt->execute();
 
 
 }
-   
+function estoque($conexao,$cod,$qtd) {
+		$query = "UPDATE produto SET quantidade=quantidade + '$qtd' WHERE cod= $cod";
+		$stmt=$conexao->prepare($query);
+		$stmt->execute();
+	
+	} 
+
+ function alterar($conexao,$cod) {
+		$query = "UPDATE produto SET descricao='$this->descricao',valor='$this->valor',quantidade='$this->quantidade',obs='$this->obs' WHERE cod= $cod";
+		$stmt=$conexao->prepare($query);
+		$stmt->execute();
+	
+	}  
 
 
 }

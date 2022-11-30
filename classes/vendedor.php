@@ -75,12 +75,14 @@ function deletar($conexao, $cod) {
 
 $query = "delete from usuarios where cod= '$cod'";
 $stmt=$conexao->prepare($query);
-
 $stmt->execute();
-
-
 }
    
-
+ function alterar($conexao,$cod) {
+		$query = "UPDATE vendedores SET nome='$this->nome',email='$this->email',telefone='$this->telefone' WHERE cod= $cod";
+		$stmt=$conexao->prepare($query);
+		$stmt->execute();
+	
+	} 
 
 }

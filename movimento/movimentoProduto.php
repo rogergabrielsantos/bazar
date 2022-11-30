@@ -46,5 +46,5 @@ if ($salvar) {
 if ($alterar) {
 	$A->alterar($conexao,$cod);
     $_SESSION['msg'] = "<div class='alert alert-success'>SDados atualizados com sucesso!</div>";
-    echo("<script type='text/javascript'> location.href='../consultaEmpresa.php';</script>");
+    echo("<script type='text/javascript'> location.href='../consultaProduto.php';</script>");
 }
