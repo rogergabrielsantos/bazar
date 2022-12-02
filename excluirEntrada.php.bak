@@ -7,8 +7,8 @@ require 'classes/conexao.php';
 require_once 'classes/entrada.php';
 $A = new entrada("","","","","","","","","");
 $A->mostra($conexao, $dataE);
-
-
+echo $dataE;
+print_r($A);
 }
 ?>
 <div class="container">

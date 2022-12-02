@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '/movimento/procedimentos.php';
+
 require_once ('header.php');
 ?>
 <div class="container">

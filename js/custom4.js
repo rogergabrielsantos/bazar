@@ -9,6 +9,7 @@ $(function() {//função anonima que somente é disparada dspois do carregamento
 	    source: function( request, response ) {
 	        $.ajax({
 	            url: "json/listacomprador.php",
+	            cache: false,
 	            dataType: "json",
 	            data: {
 	            	acao: 'autocomplete',
@@ -45,7 +46,7 @@ $(function() {//função anonima que somente é disparada dspois do carregamento
 	            },
 	            success: function( data ) {
                    $('#codComprador').val(data[0].cod); 
-				   $('#comprador').val(data[0].nome);
+				   $('#comprador1').val(data[0].nome);
 	            }
 	        });
     	}
@@ -92,7 +93,7 @@ $( "#produto").autocomplete({
 	            },
 	            success: function( data ) {
                    $('#codProduto').val(data[0].cod); 
-				   $('#produto').val(data[0].descricao);
+				   $('#produto1').val(data[0].descricao);
 	               $('#valor').val(data[0].valor);
 	               
 				   

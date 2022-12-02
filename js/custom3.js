@@ -9,6 +9,7 @@ $(function() {//função anonima que somente é disparada dspois do carregamento
 	    source: function( request, response ) {
 	        $.ajax({
 	            url: "json/listavendedor.php",
+	            cache: false,
 	            dataType: "json",
 	            data: {
 	            	acao: 'autocomplete',

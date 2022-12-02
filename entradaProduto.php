@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once '/movimento/procedimentos.php';
 require_once ('header.php');
 ?>
 <div class="container">
@@ -20,11 +19,11 @@ require_once ('header.php');
             </div>
 			<div class="form-group">
                 <label for="produto">Produto</label>
-                <input class="form-control" type="text" id="produto" name="produto" placeholder="Escolha o Produto">
+                <input class="form-control" type="text" id="produto" name="p" placeholder="Escolha o Produto">
             </div>
-			<div class="form-group">
-                <label for="codProduto">Cod Produto</label>
-                <input class="form-control" readonly type="text" id="codProduto" name="codProduto" placeholder="Escolha o Produto">
+			<div class="input-group">
+                <input class="form-control" readonly type="text" id="codProduto" name="codProduto" placeholder="Codigo Produto">
+                <input class="form-control" readonly type="text" id="produto1" name="produto" placeholder="Produto">
             </div>
 			<div class="form-group">
                 <label for="valor">Valor</label>
@@ -32,19 +31,16 @@ require_once ('header.php');
             </div>
             <div class="form-group">
                 <label for="comprador">Contribuinte</label>
-                <input class="form-control" type="text" id="comprador" name="comprador" placeholder="Escolha o Contribuinte">
+                <input class="form-control" type="text" id="comprador" name="c" placeholder="Escolha ontribuinte">
             </div>
-			<div class="form-group">
-                <label for="codComprador">Cod Contribuinte</label>
-                <input class="form-control" readonly type="text" id="codComprador" name="codComprador" placeholder="Escolha o Contribuinte">
+			<div class="input-group">
+                <input class="form-control" readonly type="text" id="codComprador" name="codComprador" placeholder="Cod Contribuinte">
+                 <input class="form-control" readonly type="text" id="comprador1" name="comprador" placeholder="Contribuinte">
             </div>
-			
-			<div class="form-group">
-                <label for="codVendedor">Cod Vendedor</label>
+			 <label for="nome">Vendedor</label>
+			<div class="input-group">
+                
                 <input class="form-control" type="text" readonly id="codVendedor" name="codVendedor" value ="<?php echo $_SESSION['cod']; ?>">
-            </div>
-			<div class="form-group">
-                <label for="vendedor">Vendedor</label>
                 <input class="form-control" readonly type="text" id="vendedor" name="vendedor" value ="<?php echo $_SESSION['nome']; ?>">
             </div>
 			

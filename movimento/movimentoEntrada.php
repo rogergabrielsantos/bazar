@@ -48,7 +48,7 @@ if ($delete) {
 if ($salvar) {
    
 	$A->insere($conexao);
-	print_r($A);
+
 	$B = new produto("","", "", "","");
 	$B->estoque($conexao,$codProduto,$quantidade);
 	$C = new comprador("","","","","");

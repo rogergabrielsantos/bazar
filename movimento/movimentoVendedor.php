@@ -28,7 +28,7 @@ if ($delete) {
 	$A = new vendedor("","","","");
     $A->deletar($conexao,$cod);
     $_SESSION['msg'] = "<div class='alert alert-success'>Usuario /Excluido com sucesso!</div>";
-    echo("<script type='text/javascript'> location.href='../consultaEmpresa.php';</script>");
+    echo("<script type='text/javascript'> location.href='../consultaVendedor.php';</script>");
 }
 
 
@@ -39,7 +39,7 @@ if ($salvar) {
 	$B->insere($conexao); 
 	$_SESSION['msg'] = "<div class='alert alert-success'>Vendedor cadastrado com sucesso!</div>";
 	
-   echo("<script type='text/javascript'> location.href='../CadastroVendedor.php';</script>");
+   echo("<script type='text/javascript'> location.href='../cadastroVendedor.php';</script>");
 }
 if ($alterar) {
 	$A->alterar($conexao,$cod);

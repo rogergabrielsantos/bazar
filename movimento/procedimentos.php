@@ -1,6 +1,6 @@
 <?php
-
-if(empty($_SESSION['perfil'])) {
+session_start();
+if(empty($_SESSION['cod'])) {
 echo("<script type='text/javascript'> location.href='index.php';</script>");	
 }
 

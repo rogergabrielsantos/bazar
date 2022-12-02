@@ -90,19 +90,19 @@ class entrada {
  
 
     
-    function mostra($conexao, $data) {
+     function mostra($conexao, $data) {
 
 		$query = "select * from entrada where data = '$data'";
         foreach($conexao->query($query) as $chave=>$valor){
-		$this->codigo[] = $valor[0];
-		$this->codProduto[]= $valor[1];
+	    $this->codigo[]= $valor[0];
+	    $this->codProduto[]= $valor[1];
 		$this->produto[]= $valor[2];
 		$this->codComprador[] = $valor[3];
 		$this->comprador[] = $valor[4];
 		$this->codVendedor[]= $valor[5];
 		$this->vendedor[]= $valor[6];
 		$this->quantidade[] = $valor[8];
-		
+	
 	
 		
 		

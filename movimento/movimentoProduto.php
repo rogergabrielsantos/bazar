@@ -32,7 +32,7 @@ if ($delete) {
 	$A = new produto("","","","","");
     $A->deletar($conexao,$cod);
     $_SESSION['msg'] = "<div class='alert alert-success'>Usuario /Excluido com sucesso!</div>";
-    echo("<script type='text/javascript'> location.href='../consultaEmpresa.php';</script>");
+    echo("<script type='text/javascript'> location.href='../consultaProduto.php';</script>");
 }
 
 
@@ -41,7 +41,7 @@ if ($salvar) {
 	$A->insere($conexao);
     $_SESSION['msg'] = "<div class='alert alert-success'>Produto cadastrado com sucesso!</div>";
   
-   echo("<script type='text/javascript'> location.href='../CadastroProduto.php';</script>");
+   echo("<script type='text/javascript'> location.href='../cadastroProduto.php';</script>");
 }
 if ($alterar) {
 	$A->alterar($conexao,$cod);

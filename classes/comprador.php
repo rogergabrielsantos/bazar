@@ -81,7 +81,7 @@ $conexao->query($query);
 }
 function deletar($conexao, $cod) {
 
-$query = "delete from usuarios where cod= '$cod'";
+$query = "delete from comprador where cod= '$cod'";
 $stmt=$conexao->prepare($query);
 
 $stmt->execute();

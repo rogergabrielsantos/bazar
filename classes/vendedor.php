@@ -51,7 +51,7 @@ function setEmail($email) {
 
     
     function mostra($conexao, $nome,$senha) {
-		$query = "select * from Vendedores where nome ='$nome' ";
+		$query = "select * from vendedores where nome ='$nome' ";
         $stmt = $conexao->query($query);
 		$user = $stmt->fetch(PDO::FETCH_OBJ);
 		
@@ -64,7 +64,7 @@ function setEmail($email) {
     
 function insere($conexao) {
 try{	
-$query = "INSERT INTO Vendedores(nome, email, telefone) VALUES ('$this->nome','$this->email','$this->telefone')";
+$query = "INSERT INTO vendedores(nome, email, telefone) VALUES ('$this->nome','$this->email','$this->telefone')";
 $conexao->query($query);
 }catch(Error $e){
 	echo $e;
@@ -73,7 +73,7 @@ $conexao->query($query);
 }
 function deletar($conexao, $cod) {
 
-$query = "delete from usuarios where cod= '$cod'";
+$query = "delete from vendedores where cod= '$cod'";
 $stmt=$conexao->prepare($query);
 $stmt->execute();
 }

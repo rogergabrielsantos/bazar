@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once '/movimento/procedimentos.php';
 require_once ('header.php');
 ?>
 <div class="container">
@@ -36,6 +35,7 @@ require_once ('header.php');
 			
             <br>
             <input  class="btn btn-primary" name="alterar" type="submit" value="Alterar">
+              <input  class="btn btn-primary" name="deletar" type="submit" value="Excluir">
         </form>
 
 </div>

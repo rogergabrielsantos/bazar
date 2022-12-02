@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once '/movimento/procedimentos.php';
 require_once ('header.php');
 $dataE = isset($_POST['dataE']) ? $_POST['dataE'] : "";
 if($dataE){
@@ -8,7 +7,6 @@ require 'classes/conexao.php';
 require_once 'classes/entrada.php';
 $A = new entrada("","","","","","","","","");
 $A->mostra($conexao, $dataE);
-
 
 }
 ?>

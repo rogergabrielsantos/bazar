@@ -33,7 +33,7 @@ if ($delete) {
 	$A = new comprador("","","","","");
     $A->deletar($conexao,$cod);
     $_SESSION['msg'] = "<div class='alert alert-success'>Usuario /Excluido com sucesso!</div>";
-    echo("<script type='text/javascript'> location.href='../consultaEmpresa.php';</script>");
+    echo("<script type='text/javascript'> location.href='../consultaComprador.php';</script>");
 }
 
 
@@ -43,7 +43,7 @@ if ($salvar) {
 	$B = new usuarios(0, $nome, $email, $telefone, 2);
 	$B->insere($conexao); 
     $_SESSION['msg'] = "<div class='alert alert-success'>Comprador cadastrado com sucesso!</div>";
-    echo("<script type='text/javascript'> location.href='../CadastroComprador.php';</script>");
+    echo("<script type='text/javascript'> location.href='../cadastroComprador.php';</script>");
 }
 if ($alterar) {
 	$A->alterar($conexao,$cod);

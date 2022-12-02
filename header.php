@@ -40,7 +40,7 @@
                            data-toggle="dropdown">Comprador</a>
 
                         <div class="dropdown-menu">
-                            <a href="CadastroComprador.php" class="dropdown-item">Cadastrar</a>
+                            <a href="cadastroComprador.php" class="dropdown-item">Cadastrar</a>
                             <a href="consultaComprador.php" class="dropdown-item">Consultar/alterar</a>
 
                         </div>
