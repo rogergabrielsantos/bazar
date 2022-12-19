@@ -118,7 +118,7 @@ class entrada {
 		$this->codVendedor[]= $valor[5];
 		$this->vendedor[]= $valor[6];
 		$this->quantidade[] = $valor[8];
-		$this->data[] = $valor[7];
+		
 		}
     }	
     

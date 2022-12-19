@@ -94,7 +94,12 @@ function estoque($conexao,$cod,$qtd) {
 		$stmt->execute();
 	
 	} 
-
+function estoque2($conexao,$cod,$qtd) {
+		$query = "UPDATE produto SET quantidade=quantidade - '$qtd' WHERE cod= $cod";
+		$stmt=$conexao->prepare($query);
+		$stmt->execute();
+	
+	} 
  function alterar($conexao,$cod) {
 		$query = "UPDATE produto SET descricao='$this->descricao',valor='$this->valor',quantidade='$this->quantidade',obs='$this->obs' WHERE cod= $cod";
 		$stmt=$conexao->prepare($query);

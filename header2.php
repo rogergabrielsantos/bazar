@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
 
             <!-- Logo -->
-            <a href="menu.php" class="navbar-brand">Bazar do Senac</a>
+            <a href="menu2.php" class="navbar-brand">Bazar do Senac</a>
 
             <!-- Menu Hamburguer -->
             <button class="navbar-toggler" data-toggle="collapse" 
@@ -40,53 +40,20 @@
                            data-toggle="dropdown">Comprador</a>
 
                         <div class="dropdown-menu">
-                            <a href="cadastroComprador.php" class="dropdown-item">Cadastrar</a>
-                            <a href="consultaComprador.php" class="dropdown-item">Consultar/alterar</a>
+                           <a href="" class="dropdown-item">Consultar/alterar</a>
 
                         </div>
 
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="" class="nav-link dropdown-toggle" 
-                           data-toggle="dropdown">Produtos</a>
-
-                        <div class="dropdown-menu">
-                            <a href="cadastroProduto.php" class="dropdown-item">Cadastrar Produtos</a>
-                            <a href="consultaProduto.php" class="dropdown-item">Consultar/alterar Produtos</a>
-                                
-                        
-						</div>
-
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="" class="nav-link dropdown-toggle" 
-                           data-toggle="dropdown">Vendedor</a>
-
-                        <div class="dropdown-menu">
-                            <a href="cadastroVendedor.php" class="dropdown-item">Cadastrar Vendedor</a>
-                            <a href="consultaVendedor.php" class="dropdown-item">Consultar/alterar Vendedor</a>
-                          
-                        </div>
-
-                    </li>
-						<li class="nav-item dropdown">
-                        <a href="" class="nav-link dropdown-toggle" 
-                           data-toggle="dropdown">Entrada</a>
-
-                        <div class="dropdown-menu">
-                            <a href="entradaProduto.php" class="dropdown-item">Entrada Produtos</a>
-                            <a href="excluirEntrada.php" class="dropdown-item">Excluir Entrada</a>
-                          
-                        </div>
-
-                    </li>
+                   
+                  
 				<li class="nav-item dropdown">
-                        <a href="" class="nav-link dropdown-toggle" 
-                           data-toggle="dropdown">Vendas</a>
+                        <a href="#" class="nav-link dropdown-toggle" 
+                           data-toggle="dropdown">Contribuições</a>
 
                         <div class="dropdown-menu">
-                            <a href="venda.php" class="dropdown-item">Vendas de Produtos</a>
-                            <a href="listar.php" class="dropdown-item">Listar Vendas</a>
+                          
+                            <a href="listar.php" class="dropdown-item">Listar Contribuições</a>
                           
                         </div>
 

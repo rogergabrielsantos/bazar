@@ -77,7 +77,7 @@ function setEmail($email) {
 		$this->codigo = $user->cod;
 		
 		}
-		return $this->codigo;
+		
     }	
     
 function insere($conexao) {

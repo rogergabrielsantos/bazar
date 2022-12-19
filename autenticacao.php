@@ -9,9 +9,13 @@ session_start();
 
         <script type="text/javascript">
             function login() {
+				
               setTimeout("window.location='menu.php'");
-
-            }
+			}
+			function login2() {
+				
+              setTimeout("window.location='menu2.php'");
+			}
 
         </script>
 
@@ -33,8 +37,14 @@ session_start();
                 $_SESSION['perfil'] = $A->getPerfil();
                 $_SESSION['nome'] = $A->getNome();
                 $_SESSION['cod'] = $A->getCodigo();
-                echo "<script>login()</script>";
-                
+				
+					if($_SESSION['perfil']==1){
+					 echo "<script>login()</script>";	
+					}else{
+						 echo "<script>login2()</script>";	
+					}
+               
+             
                          } else {
 
                 echo ("<script type='text/javascript'> location.href='index.php';</script>");

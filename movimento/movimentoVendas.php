@@ -1,8 +1,8 @@
 <?php
 session_start();
 require '../classes/conexao.php';
-require_once 'procedimentos.php';
-require_once '../classes/entrada.php';
+
+require_once '../classes/vendas.php';
 require_once '../classes/produto.php';
 require_once '../classes/comprador.php';
 
@@ -25,7 +25,7 @@ $data = $_POST['data'];
 $valor=$_POST['valor'];
 $valort = $valor*  $quantidade;
 
-$A = new entrada($cod, $codProduto, $produto, $codComprador,$comprador,$codVendedor,$vendedor,$data ,$quantidade);
+$A = new vendas($cod, $codProduto, $produto, $codComprador,$comprador,$codVendedor,$vendedor,$data ,$quantidade);
  
 
 }
@@ -48,12 +48,13 @@ if ($delete) {
 if ($salvar) {
    
 	$A->insere($conexao);
+print_r($A);
 	$B = new produto("","", "", "","");
-	$B->estoque($conexao,$codProduto,$quantidade);
+	$B->estoque2($conexao,$codProduto,$quantidade);
 	$C = new comprador("","","","","");
-	$C->atualiza($conexao,$codComprador,$valort);
-    $_SESSION['msg'] = "<div class='alert alert-success'>Entrada Realizada com sucesso!</div>";
+	$C->atualiza2($conexao,$codComprador,$valort);
+    $_SESSION['msg'] = "<div class='alert alert-success'>Venda Realizada com sucesso!</div>";
 
-   echo("<script type='text/javascript'> location.href='../entradaProduto.php';</script>");
+   //echo("<script type='text/javascript'> location.href='../venda.php';</script>");
 }
 

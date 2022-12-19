@@ -67,6 +67,7 @@ function setUsuario($usuario) {
 		$this->perfil = $user->perfil;
 		$this->nome = $user->nome;
 		$this->codigo = $user->cod;	
+		$this->senha = $user->senha;	
 		}
 		
 		

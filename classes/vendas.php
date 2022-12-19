@@ -1,6 +1,6 @@
 <?php
 
-class entrada {
+class vendas {
 
     private $codigo;
     private $codProduto;
@@ -92,7 +92,7 @@ class entrada {
     
     function mostra($conexao, $data) {
 
-		$query = "select * from entrada where data = '$data'";
+		$query = "select * from vendas where data = '$data'";
         foreach($conexao->query($query) as $chave=>$valor){
 		$this->codigo[] = $valor[0];
 		$this->codProduto[]= $valor[1];
@@ -103,28 +103,20 @@ class entrada {
 		$this->vendedor[]= $valor[6];
 		$this->quantidade[] = $valor[8];
 		
+	
+		
+		
+		
 		}
+		
+    
     }
 
-	    function mostra2($conexao,$nome) {
-
-		$query = "select * from entrada where comprador = '$nome'";
-        foreach($conexao->query($query) as $chave=>$valor){
-		$this->codigo[] = $valor[0];
-		$this->codProduto[]= $valor[1];
-		$this->produto[]= $valor[2];
-		$this->codComprador[] = $valor[3];
-		$this->comprador[] = $valor[4];
-		$this->codVendedor[]= $valor[5];
-		$this->vendedor[]= $valor[6];
-		$this->quantidade[] = $valor[8];
-		$this->data[] = $valor[7];
-		}
-    }	
+		
     
 function insere($conexao) {
 	Try{
-$query = "INSERT INTO entrada(codProduto, produto,codComprador,comprador,codVendedor,vendedor,data,quantidade) VALUES ('$this->codProduto','$this->produto','$this->codComprador','$this->comprador','$this->codVendedor','$this->vendedor','$this->data','$this->quantidade')";
+$query = "INSERT INTO vendas(codProduto, produto,codComprador,comprador,codVendedor,vendedor,data,quantidade) VALUES ('$this->codProduto','$this->produto','$this->codComprador','$this->comprador','$this->codVendedor','$this->vendedor','$this->data','$this->quantidade')";
 $conexao->query($query);
  
 }catch(Error $e){
@@ -135,7 +127,7 @@ $conexao->query($query);
 }
 function deletar($conexao, $cod) {
 try{
-$query = "delete from entrada where cod= '$cod'";
+$query = "delete from vendas where cod= '$cod'";
 $stmt=$conexao->prepare($query);
 
 $stmt->execute();
